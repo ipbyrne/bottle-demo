@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Bottle Demo</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<style type="text/css">
 		body
 		{
@@ -127,5 +128,26 @@
 			
 		</div>
 	</div>
+  
+  
+    <script type="text/javascript">
+      (function(){
+          var number = 1
+          var box=document.getElementById('coke');
+        
+          function infScroll(){
+              box.scrollLeft   += number;        
+              if(box.scrollLeft===300){
+                 number = number * -1;
+              }
+            
+            if(box.scrollLeft === 0) {
+              number = number * -1;
+            }
+              window.requestAnimationFrame(infScroll);
+          }
+          window.requestAnimationFrame(infScroll);
+      }());
+  </script>
 </body>
 </html>
