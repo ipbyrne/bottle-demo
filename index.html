@@ -1,150 +1,593 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<!DOCTYPE html>
+<html> 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Bottle Demo</title>
+    <meta charset="UTF-8">
+    <title>Tisane | Alkaline Organic (pH) Balancing Teas</title>
+    <meta name="description" content="Alkaline Tea">
+    <meta name="keywords" content="alkaline, alkaline tea, ph balancing tea, ph tea, ph+, ph positive tea, ph positive, organic tea, organic alkaline tea">
+    <meta name="author" content="Alkaline Teas">
+    <link rel="stylesheet" type="text/css" href="http://www.tisaneteas.com/style.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<style type="text/css">
-		body
-		{
-			margin: 0;
-			padding: 0;
-            height: 100%;
-		}
-
-		#coke
-		{
-			width: 510px;
-			height: 500px;
-			overflow: auto;
-            padding-right: 100px;
-            padding-left: 500px;
-		}
-		
-		img
-		{
-			border: 0;
-			margin-left: -156px;
-		}
-		
-		a
-		{
-			display: block;
-			padding-top: 19px;
-			width: 194px;
-		}
-
-		div div
-		{
-			background-image: url(coke-scroll.png);
-			background-repeat: no-repeat;
-			background-position: 0 0;
-			padding-left: 300px;
-			width: 660px;
-		}
-
-		p
-		{
-			margin: 0;
-			padding: 0;
-			float: left;
-			height: 467px;
-			background-image: url(label.png);
-			background-attachment: fixed;
-            background-size: 325px 250px;
-			background-repeat: repeat-x;
-			width: .5px;
-			margin-top: 0px;
-		}
-		
-		#x1 {background-position: 5px 140px;}
-		#x2 {background-position: 0px 140px;}
-		#x3 {background-position: -3px 140px;}
-		#x4 {background-position: -6px 140px;}
-		#x5 {background-position: -8px 140px;}
-		#x6 {background-position: -10px 140px;}
-		#x7 {background-position: -12px 140px;}
-		#x8 {background-position: -14px 140px;}
-		#x9 {background-position: -15px 140px;}
-		#x10 {background-position: -16px 140px;}
-		#x11 {background-position: -17px 140px;}
-		#x12 {background-position: -18px 140px;}
-		#x13 {background-position: -19px 140px;}
-		#x14 {background-position: -20px 140px;}
-		#x15 {background-position: -21px 140px;}
-		#x16 {background-position: -22px 140px; width: 2px;}
-		#x17 {background-position: -23px 140px;}
-		#x18 {background-position: -24px 140px; width: 2px;}
-		#x19 {background-position: -25px 140px; width: 2px;}
-		#x20 {background-position: -26px 140px; width: 2px;}
-		#x21 {background-position: -27px 140px; width: 2px;}
-		#x22 {background-position: -28px 140px; width: 3px;}
-		#x23 {background-position: -29px 140px; width: 3px;}
-		#x24 {background-position: -30px 140px; width: 4px;}
-		#x25 {background-position: -31px 140px; width: 5px;}
-		#x26 {background-position: -32px 140px; width: 7px;}
-		#x27 {background-position: -33px 140px; width: 12px;}
-		#x28 {background-position: -34px 140px; width: 55px;}
-		#x29 {background-position: -35px 140px; width: 11px;}
-		#x30 {background-position: -36px 140px; width: 6px;}
-		#x31 {background-position: -37px 140px; width: 5px;}
-		#x32 {background-position: -38px 140px; width: 4px;}
-		#x33 {background-position: -39px 140px; width: 3px;}
-		#x34 {background-position: -40px 140px; width: 2px;}
-		#x35 {background-position: -41px 140px; width: 3px;}
-		#x36 {background-position: -42px 140px; width: 2px;}
-		#x37 {background-position: -43px 140px; width: 2px;}
-		#x38 {background-position: -44px 140px;}
-		#x39 {background-position: -45px 140px; width: 2px;}
-		#x40 {background-position: -46px 140px;}
-		#x41 {background-position: -47px 140px;}
-		#x42 {background-position: -48px 140px;}
-		#x43 {background-position: -49px 140px;}
-		#x44 {background-position: -50px 140px;}
-		#x45 {background-position: -51px 140px;}
-		#x46 {background-position: -52px 140px;}
-		#x47 {background-position: -53px 140px;}
-		#x48 {background-position: -54px 140px;}
-		#x49 {background-position: -56px 140px;}
-		#x50 {background-position: -58px 140px;}
-		#x51 {background-position: -60px 140px;}
-		#x52 {background-position: -62px 140px;}
-		#x53 {background-position: -65px 140px;}
-		#x54 {background-position: -68px 140px;}
-		#x55 {background-position: -74px 140px;}
-	</style>
+    <style type="text/css">
+      body { margin: 0; padding: 0; height: 100%; }
+      #coke
+      {
+          width: 156px;
+          height: 600px;
+          overflow: auto;
+          position:relative;
+          margin: auto;
+          overflow-x: hidden;
+      }
+      #bottle-mask {
+          position:absolute;
+          margin: .5% auto;
+          left: 0;
+          right: 0;
+          z-index:1;
+      }
+      .label-div {
+          position: absolute;
+          top: 153px;
+          width: 1000px;
+          height: 250px;
+          z-index: 2;
+          background-image: url(label.png);
+          background-size: 325px 250px;
+          background-repeat: repeat-x;
+      }
+      #bottle-overlay {
+          position: absolute;
+          margin: .5% auto;
+          left: 0;
+          right: 0;
+          z-index: 3;
+      }
+      #pusher {
+          width: 325px;
+          height: 500px;
+          position: relative;
+          z-index: 4;
+      }
+      #hero-products-container {
+        height: 375px;
+      }
+    </style>
 </head>
 <body>
-	<div id="coke">
-		<div id="y" style="position: relative; left:0. top: 0;">
-            <img src="mask.svg" width="156" height="467" style="position: absolute; top: 0px; left: 455.5px; z-index: -5;"/>
-                    
-              <p id="x1"></p><p id="x2"></p><p id="x3"></p><p id="x4"></p><p id="x5"></p><p id="x6"></p><p id="x7"></p><p id="x8"></p><p id="x9"></p><p id="x10"></p><p id="x11"></p><p id="x12"></p><p id="x13"></p><p id="x14"></p><p id="x15"></p><p id="x16"></p><p id="x17"></p><p id="x18"></p><p id="x19"></p><p id="x20"></p><p id="x21"></p><p id="x22"></p><p id="x23"></p><p id="x24"></p><p id="x25"></p><p id="x26"></p><p id="x27"></p><p id="x28"></p><p id="x29"></p><p id="x30"></p><p id="x31"></p><p id="x32"></p><p id="x33"></p><p id="x34"></p><p id="x35"></p><p id="x36"></p><p id="x37"></p><p id="x38"></p><p id="x39"></p><p id="x40"></p><p id="x41"></p><p id="x42"></p><p id="x43"></p><p id="x44"></p><p id="x45"></p><p id="x46"></p><p id="x47"></p><p id="x48"></p><p id="x49"></p><p id="x50"></p><p id="x51"></p><p id="x52"></p><p id="x53"></p><p id="x54"></p><p id="x55"></p>
-             <a href="http://www.tisaneteas.com/looknfeel" target="_blank" style="position: relative; top: -20px; left: 0; height: 0px">
-               <img src="overlay.png" width="156" height="467" alt="Pure CSS Coke Can by Rom&aacute;n Cort&eacute;s" style="position: relative; top: 0px; left: 0;"/>
-             </a>
-		</div>
-	</div>
-  
-  
-    <script type="text/javascript">
-      (function(){
-          var number = 1
+  <div id="header-wrapper">
+	<div id="header">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td width="300" valign="top">
+              <div id="header-subscribe">
+				<!--Begin mc_embed_signup-->
+				<form action="//alkaline-tea.us10.list-manage.com/subscribe/post?u=d25f2c927c41254a158920054&amp;id=4e20e834f4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    <div class="header-subscribe-title">join our newsletter</div>
+                    <div id="header-subscribe-field" class="mc-sub-header">
+                        <table width="200" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td><input type="email" placeholder="Enter your email..." name="EMAIL" class="required email header-subscribe-form" id="mce-EMAIL"></td>
+                                  
+                                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_d25f2c927c41254a158920054_4e20e834f4" tabindex="-1" value=""></div>
+                              <td onclick="changeID();"><input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="header-subscribe-button rollover"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+				</form>
+				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+                /* Code to change button class and text once submission is accepted */
+                function changeID() {
+                var email = document.getElementById('mce-EMAIL').value;
+                var emailFilter = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                
+                if(emailFilter.test(email)) {
+                    document.getElementById("mc-embedded-subscribe").className = "header-subscribe-button-added rollover";
+                    document.getElementById("mc-embedded-subscribe").value = "Added :)"
+                }
+                }
+                </script>
+                <!--End mc_embed_signup-->
+              </div>
+              <div id="header-social">				  <span id="header-social-item"><a class="rollover" href="http://www.facebook.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-facebook.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.twitter.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-twitter.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.pinterest.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-pinterest.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.instagram.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-instagram.svg" width="30" class="rounded"/></a></span></div>
+          </td>
+          <td width="300" valign="top">
+            <div id="organic"><a href="http://www.tisaneteas.com/looknfeel"><img class="organic" src="http://www.tisaneteas.com/images/logo.svg" width="229" nopin="nopin"/></a></div>
+          </td>
+          <td width="300" valign="top" style="text-align:right; padding:5px 0 5px 0;">
+          	
+          	<div class="header-shipping-title">*FREE SHIPPING ON ALL ORDERS</div>
+          	<div style="margin-top:7px;"><a class="header-shop-login" href="#"><span id="header-shop-login">Login</span></a>
+          	<a class="header-shop-login" href="#"><span id="header-shop-cart">Cart $45.45 (6 items)</span></a></div>
+          	
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>  
+  <div id="nav-wrapper">
+        <div id="nav" class="nav">
+            <table width="100%" border="0">
+              <tbody>
+                <tr>
+                  <td width="25%" style="border-right:1px solid #c5c4c2;" class="nav-padding">
+                  <a class="nav" href="/products">
+                  	<div>OUR PRODUCTS<br><span class="nav-sub">view our products</span> <img src="http://www.tisaneteas.com/images/arrow.svg"/></div>
+                  </a>
+                  </td>
+                  <td width="25%" style="border-right:1px solid #c5c4c2;" class="nav-padding">
+                  <a class="nav" href="/benefits">
+                  	<div>THE BENEFITS<br><span class="nav-sub">LEARN ABOUT ALKALINITY</span> <img src="http://www.tisaneteas.com/images/arrow.svg"/></div>
+                  </a>
+                  </td>
+                  <td width="25%" style="border-right:1px solid #c5c4c2;" class="nav-padding">
+                  <a class="nav" href="/about">
+                  	<div>Our Story<br><span class="nav-sub">Read our Story</span> <img src="http://www.tisaneteas.com/images/arrow.svg"/></div>
+                  </a>
+                  </td>
+                  <td width="25%" class="nav-padding">
+                  	<a class="nav" href="/locate">
+                    	<div>WHERE TO BUY<br><span class="nav-sub">Find a local store</span> <img src="http://www.tisaneteas.com/images/arrow.svg"/></div>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+  <div id="hero-products-container">
+      <div id="hero-products-layer">
+          <div id="hero-products-splash">
+            <img id="bottle-mask" src="mask.svg" width="156" height="467"/>
+            <!--<img id="bottle-label" src="http://ipbyrne.github.io/bottle-demo/label.png"/>-->
+            <img id="bottle-overlay" src="overlay.png" width="156" height="467" />
+            <div id="coke">
+              <div class="label-div">
+              </div>
+              <div id="pusher"></div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <script type="text/javascript">
+    (function(){
           var box=document.getElementById('coke');
-        
+
           function infScroll(){
-              box.scrollLeft   += number;        
-              if(box.scrollLeft===300){
-                 number = number * -1;
+              box.scrollLeft   += 1;
+
+              if(box.scrollLeft>=325){
+                 box.scrollLeft = 0;
               }
-            
-            if(box.scrollLeft === 0) {
-              number = number * -1;
-            }
-              window.requestAnimationFrame(infScroll);
+            window.requestAnimationFrame(infScroll);
           }
           window.requestAnimationFrame(infScroll);
       }());
+  </script>    
+<div id="wrapper">
+	<div class="page-title-center"><h1>OUR PRODUCTS</h1></div>
+    <div class="page-title-content-center">Read about our products, thoughts, and benefits</div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="50">
+      <tr>
+        <td width="40%">&nbsp;</td>
+        <td width="20%">
+        	<div id="ph-meter">
+           	<div id="ph-meter-layer"><IMG src="http://www.tisaneteas.com/images/meter.svg" width="100px"/>
+            	</div>
+           </div>
+        </td>
+        <td width="40%">&nbsp;</td>
+      </tr>
+    </table>
+        <div id="product-page">
+        <div id="product-left">
+            <div id="product-picture">
+              <img src="http://www.tisaneteas.com/images/beverage.png" width="100%"/>
+            </div>
+        </div>
+        <div id="product-right">
+            <div id="product-name">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                      	<div id="product-name-left">
+                      		<div>
+                      		  <h1>Hibiscus Berry</h1></div>
+                            <h5>Organic Rooibos Tea, Hibiscus, 
+and Raspberry Infusion.</h5>
+                      	</div>
+                      </td>
+                      <td>
+                        <div id="product-name-right">
+                            <div id="product-social">
+                                <span id="product-social-item"><a class="rollover" href="http://www.facebook.com/alkalinetea"><img src="http://www.tisaneteas.com/images/social-facebook.svg" width="35" class="rounded"/></a></span>
+                                <span id="product-social-item"><a class="rollover" href="http://www.twitter.com/alkalinetea"><img src="http://www.tisaneteas.com/images/social-twitter.svg" width="35" class="rounded"/></a></span>
+                                <span id="product-social-item"><a class="rollover" href="http://www.pinterest.com/alkalinetea"><img src="http://www.tisaneteas.com/images/social-pinterest.svg" width="35" class="rounded"/></a></span>
+                                <span id="product-social-item"><a class="rollover" href="http://www.instagram.com/alkalinetea"><img src="http://www.tisaneteas.com/images/social-instagram.svg" width="35" class="rounded"/></a></span>
+                            </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>            
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td valign="top">
+                    <div id="product-info-left">
+                        	   <div class="product-heading">Our organic teas are created with a filtered water source that has been alkalized to a pH level that is ideal for cell hydration, absorption, and mineral uptake. Packed with natural flavor, our slightly-sweet alkaline teas are an excellent compliment to a holistic, balanced, and healthy lifestyle.
+                        	   <div class="product-content">
+  <div class="yanone">What's Your (Ph)?</div>
+Keeping your body balanced and functioning optimally depends almost completely on your diet. Learn more about pH balancing your body at <a href="/learn" class="link">HERE</a>.
+                         	   </div>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="60%" valign="bottom">
+                                    <ul class="product-content-list">
+                                        <li>Alkaline Water (pH 8.3)</li>
+                                        <li>Ideal Hydration pH Level</li>
+                                        <li>Organic Rooibos Tea</li>
+                                        <li>Natural Antioxidants</li>
+                                        <li>60 Calories</li>
+                                        <li>Caffeine-Free</li>
+                                        <li>Certified Organic</li>
+                                    </ul>
+                                
+                                </td>
+                                <td width="40%"><img src="http://www.tisaneteas.com/images/ph-emblem.svg" width="150" style="padding-top:50px;"/></td>
+                              </tr>
+                            </table>
+                       		
+                            <div id="product-certifications">
+                        		<span id="product-certification"><img src="http://www.tisaneteas.com/images/calories.svg" width="50"/></span>
+                             <span id="product-certification"><img src="http://www.tisaneteas.com/images/usda.svg" width="50"/></span>
+                             <span id="product-certification"><img src="http://www.tisaneteas.com/images/non-gmo.svg" height="50"/></span>
+                             <!--
+                             <div id="product-barcode"><img src="images/barcode-hibiscus-berry.svg" width="120"/></div>
+                             -->
+                        </div>
+                        </div>
+                        
+                        
+                        
+                        <!--
+                        <div class="product-price">$3.99</div>
+                        -->
+                    </div>
+                  </td>
+                  <td valign="top">
+                    <div id="product-info-right">
+                        <div id="product-label">
+                            <div id="product-label-line" class="product-label">
+                                <div class="product-label-header">Nutritional Facts</div>
+                                <div class="product-label">Serving Size 8 fl oz (237mL)<br>Serving Per Container 2</div>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Amount Per Serving</strong></span></td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Calories</strong> 90</span></td>
+                                      <td class="text-align-right">Calories from fat 0</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td></td>
+                                      <td class="text-align-right"><span class="product-label-mini">% Daily Value*</span></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Total Fat</strong> 0g</span></td>
+                                      <td class="text-align-right"><strong>0%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span id="product-label-indent">Saturated Fat 0g</span></td>
+                                      <td class="text-align-right"><strong>0%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span id="product-label-indent">Trans Fat 0g</span></td>
+                                      <td class="text-align-right"><strong></strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Cholesterol</strong> 0g</span></td>
+                                      <td class="text-align-right"><strong>0%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Sodium</strong> 40mg</span></td>
+                                      <td class="text-align-right"><strong>2%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Total Carbohydrate</strong> 20g</span></td>
+                                      <td class="text-align-right"><strong>7%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span id="product-label-indent">Dietary Fiber 0g</span></td>
+                                      <td class="text-align-right"><strong>0%</strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span id="product-label-indent">Sugars 0g</span></td>
+                                      <td class="text-align-right"><strong></strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div id="product-label-line" class="product-label">
+                                <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span><strong>Protein</strong> 2g</span></td>
+                                      <td class="text-align-right">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div class="product-label-mini product-label" >* Percent Daily Values are based on a 2,000 calorie diet.</div>
+                            <div id="product-ingredients" class="product-label">INGREDIENTS: ORGANIC CARROT JUICE, ORGANIC ORANGE JUICE, ORGANIC APPLE JUICE, ORGANIC PINEAPPLE JUICE, ORGANIC LEMON JUICE, ORGANIC GROUND TURMERIC</div>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div id="blog-page-related">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="33%">
+                <div id="blog-item">
+                    <div id="blog-photo"><a href="#"><img src="http://www.tisaneteas.com/images/yoga.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="blog-date"><em>April 4th, 2015</em></div>
+                    <div id="blog-title"><h4><a href="#">This is the title of a blog</a></h4></div>
+                    <div id="blog-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+              <td width="33%">
+                <div id="blog-item">
+                    <div id="blog-photo"><a href="#"><img src="http://www.tisaneteas.com/images/yoga2.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="blog-date"><em>April 4th, 2015</em></div>
+                    <div id="blog-title"><h4><a href="#">This is the title of a blog</a></h4></div>
+                    <div id="blog-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+              <td width="33%">
+                <div id="blog-item-right">
+                    <div id="blog-photo"><a href="#"><img src="http://www.tisaneteas.com/images/yoga3.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="blog-date"><em>April 4th, 2015</em></div>
+                    <div id="blog-title"><h4><a href="#">This is the title of a blog</a></h4></div>
+                    <div id="blog-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>    	<div class="page-title-center"><h3>ingredients</h3></div>
+    <div class="page-title-content">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of.</div><br><br>
+    <div id="ingredients">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="33%">
+              	<div id="ingredients-item">
+                    <div id="ingredients-photo"><a href="#"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="ingredients-date"><em>Organic</em></div>
+                    <div id="ingredients-title">
+                      <h4>Rooibos tea</h4></div>
+                    <div id="ingredients-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+              <td width="33%">
+              	<div id="ingredients-item">
+                    <div id="ingredients-photo"><a href="#"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="ingredients-date"><em>Organic</em></div>
+                    <div id="ingredients-title">
+                      <h4>stevia</h4></div>
+                    <div id="ingredients-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+              <td width="33%">
+              	<div id="ingredients-item-right">
+                    <div id="ingredients-photo"><a href="#"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="280" nopin="nopin"/></a></div>
+                    <div id="ingredients-date"><em>Organic</em></div>
+                    <div id="ingredients-title">
+                      <h4>ginger root</h4></div>
+                    <div id="ingredients-excerpt">Eating well-balanced, satisfying meals is one of the keys to maintaining a healthy weight and a healthy lifestyle. But whether you're a mindless snacker like me or because not all of your are keeping you as full as...</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>	    
+  
+  
+  
+  <div id="demo-container">
+        <img id="image1" src="http://www.tisaneteas.com/images/demo1.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image2" src="http://www.tisaneteas.com/images/demo2.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image3" src="http://www.tisaneteas.com/images/demo3.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image4" src="http://www.tisaneteas.com/images/demo4.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image5" src="http://www.tisaneteas.com/images/demo5.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image6" src="http://www.tisaneteas.com/images/demo6.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image7" src="http://www.tisaneteas.com/images/demo7.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image8" src="http://www.tisaneteas.com/images/demo8.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image9" src="http://www.tisaneteas.com/images/demo9.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image10" src="http://www.tisaneteas.com/images/demo10.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image11" src="http://www.tisaneteas.com/images/demo11.jpg" width="24.5%" nopin="nopin"/>
+        <img id="image12" src="http://www.tisaneteas.com/images/demo12.jpg" width="24.5%" nopin="nopin"/>
+    </div>
+  
+  <script type="text/javascript">
+    // Need array of sidplayed images -- Always contains 12
+    var displayedImages  = ["http://www.tisaneteas.com/images/demo1.jpg","http://www.tisaneteas.com/images/demo2.jpg","http://www.tisaneteas.com/images/demo3.jpg","http://www.tisaneteas.com/images/demo4.jpg","http://www.tisaneteas.com/images/demo5.jpg","http://www.tisaneteas.com/images/demo6.jpg","http://www.tisaneteas.com/images/demo7.jpg","http://www.tisaneteas.com/images/demo8.jpg","http://www.tisaneteas.com/images/demo9.jpg","http://www.tisaneteas.com/images/demo10.jpg","http://www.tisaneteas.com/images/demo11.jpg","http://www.tisaneteas.com/images/demo12.jpg"];
+    
+    // Find with image to switch out
+      // Use math.floor on a random number between 1 &  12, grab "url"+number+'.jpg'
+    
+    // Need aray of undisplayed images -- Always contains 8 -- In this case 7
+    var undisplayedImage = ["http://www.tisaneteas.com/images/demo13.jpg","http://www.tisaneteas.com/images/demo14.jpg","http://www.tisaneteas.com/images/demo15.jpg","http://www.tisaneteas.com/images/demo16.jpg","http://www.tisaneteas.com/images/demo17.jpg","http://www.tisaneteas.com/images/demo18.jpg","http://www.tisaneteas.com/images/demo19.jpg"];
+    
+    // Find with image to switch in
+      // Use math.floor on a random number between 1 &  7, grab "url"+number+'.jpg'
+    
+    
+    // Need to switch items in array, and replace current src
+    
+    (function(){
+          var box=document.getElementById('coke');
+
+          function infScroll(){
+              box.scrollLeft   += 1;
+
+              if(box.scrollLeft>=325){
+                 box.scrollLeft = 0;
+              }
+            window.requestAnimationFrame(infScroll);
+          }
+          window.requestAnimationFrame(infScroll);
+      }());
+    
+    // Rotate Image Based on Time
+    var rotate_them = setInterval(function(){rotating()},4000); // Last input is frequency of switch in milliseconds.
+    function rotating() {
+      // Code to Rotate Image
+      console.log('test');                                                  
+    }
+    
   </script>
-</body>
+  
+  
+  
+  </div>
+<div id="instagram">
+    <table width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tbody>
+        <tr>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+          <td width="14%"><img src="http://www.tisaneteas.com/images/wood-dark.jpg" class="rounded-large" width="100%" nopin="nopin"/></td>
+        </tr>
+      </tbody>
+    </table>
+</div>    
+<div id="footer">
+        <div id="footer-center" class="footer-sub">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="49%" align="left" id="footer-line"><span class="footer-name"><strong>TISANE</strong></span> <span class="footer-pronounce">[tea-sāhn] n.&nbsp;&nbsp;<img src="http://www.tisaneteas.com/images/arrow-wiki.svg" width="6px"/><a href="http://dictionary.cambridge.org/us/pronunciation/english/tisane" target="_blank" class="footer-wiki">Pronunciation</a></span><br><div class="footer-definition">Packed with natural flavor, our slightly-sweet alkaline teas are an excellent compliment to a holistic, balanced, and healthy lifestyle.</div><div><img src="http://www.tisaneteas.com/images/arrow-wiki.svg" width="6px"/><a href="https://en.wikipedia.org/wiki/Herbal_tea" target="_blank" class="footer-wiki">Learn more about tisane teas</a></div></td>
+                <td width="17%" align="left" id="footer-line" class="footer-indent" valign="top">
+                	<img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/products" class="footer-link">Our Products</a><br>
+                  <img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/benefits" class="footer-link">Benefits</a><br>	
+                  <img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/locate" class="footer-link">Where to Buy</a><br>
+                </td>
+                <td width="11%" align="left" class="footer-indent" valign="top">
+               	<img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/about" class="footer-link">About</a><br>
+					<img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/blog" class="footer-link">Our Blog</a><br> 
+                  <img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/contact" class="footer-link">Contact</a><br>
+                  <img src="http://www.tisaneteas.com/images/arrow-white.svg" width="6px"/><a href="/contact" class="footer-link">Contact</a><br>
+                </td>
+                <td width="19%" align="right" class="footer-indent" valign="top">
+               					  <span id="header-social-item"><a class="rollover" href="http://www.facebook.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-facebook.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.twitter.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-twitter.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.pinterest.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-pinterest.svg" width="30" class="rounded"/></a></span>
+                <span id="header-social-item"><a class="rollover" href="http://www.instagram.com/alkalinetea" target="_blank"><img src="http://www.tisaneteas.com/images/social-instagram.svg" width="30" class="rounded"/></a></span>                </td>
+              </tr>
+            </table>
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69355922-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
 </html>
