@@ -18,12 +18,18 @@
       body { margin: 0; padding: 0; height: 100%; }
       #coke
       {
-          width: 156px;
-          height: 600px;
+          width: 150px;
+          height: 460px;
           overflow: auto;
           position:relative;
           margin: auto;
           overflow-x: hidden;
+          overflow-y: hidden;
+          -webkit-mask-image: url(mask.svg);
+          background-color: #CC4966;
+          z-index: 2;
+          top: 0px;
+          left: 0px;
       }
       #bottle-mask {
           position:absolute;
@@ -34,17 +40,25 @@
       }
       .label-div {
           position: absolute;
-          top: 153px;
+          top: 21px;
           width: 1000px;
-          height: 250px;
+          height: 410px;
           z-index: 2;
           background-image: url(label.png);
-          background-size: 325px 250px;
+          background-size: 425px 410px;
           background-repeat: repeat-x;
       }
+       #bottle-label {
+            position: absolute;
+            top: 250px;
+            width: 325px;
+            height: 250px;
+            z-index: 2;
+        }
       #bottle-overlay {
+          height: 462px;
           position: absolute;
-          margin: .5% auto;
+          margin: .0% auto;
           left: 0;
           right: 0;
           z-index: 3;
@@ -152,9 +166,9 @@
   <div id="hero-products-container">
       <div id="hero-products-layer">
           <div id="hero-products-splash">
-            <img id="bottle-mask" src="mask.svg" width="156" height="467"/>
-            <!--<img id="bottle-label" src="http://ipbyrne.github.io/bottle-demo/label.png"/>-->
-            <img id="bottle-overlay" src="overlay.png" width="156" height="467" />
+            <!--<img id="bottle-mask" src="mask.svg" width="156" height="467"/>-->
+            <!--<img id="bottle-label" src="label.png"/>-->
+            <img id="bottle-overlay" src="overlay.png" width="152" height="467" />
             <div id="coke">
               <div class="label-div">
               </div>
@@ -169,12 +183,13 @@
   <script type="text/javascript">
     (function(){
           var box=document.getElementById('coke');
+          box.scrollLeft = 425;
 
           function infScroll(){
-              box.scrollLeft   += 1;
+              box.scrollLeft   += -1;
 
-              if(box.scrollLeft>=325){
-                 box.scrollLeft = 0;
+              if(box.scrollLeft<=2){
+                 box.scrollLeft = 425;
               }
             window.requestAnimationFrame(infScroll);
           }
@@ -651,7 +666,7 @@ Keeping your body balanced and functioning optimally depends almost completely o
           $(".image10").attr("src", displayedImages[9]);
           $(".image11").attr("src", displayedImages[10]);
           $(".image12").attr("src", displayedImages[11]);    
-        }, 250) //Last input is time which should be 1/4 of the speed of the card flip                                
+        }, 150) //Last input is time which should be 1/4 of the speed of the card flip                                
     }
     
   </script>
