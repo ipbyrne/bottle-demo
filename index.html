@@ -77,7 +77,7 @@
       }
     </style>
 </head>
-<body>
+<body onscroll="scrollFunction()">
   <div id="header-wrapper">
 	<div id="header">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -186,8 +186,8 @@
   <script type="text/javascript">
     (function(){
           var box=document.getElementById('coke');
-          box.scrollLeft = 525;
-
+          box.scrollLeft = 110;
+          /*
           function infScroll(){
               box.scrollLeft   += -1;
 
@@ -197,7 +197,21 @@
             window.requestAnimationFrame(infScroll);
           }
           window.requestAnimationFrame(infScroll);
+          */
       }());
+    
+    var box=document.getElementById('coke');
+    var number = -1;
+    function scrollFunction() {
+      console.log(box.scrollLeft);
+      box.scrollLeft   += number;
+      if(box.scrollLeft<=70){
+         number *= -1;
+      } else if(box.scrollLeft>=110) {
+         number *= -1;
+      }
+      
+    }
   </script>    
 <div id="wrapper">
 	<div class="page-title-center"><h1>OUR PRODUCTS</h1></div>
