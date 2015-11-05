@@ -44,7 +44,7 @@
           height: 410px;
           z-index: 2;
           background-image: url(label.png);
-          background-size: 425px 410px;
+          background-size: 525px 410px;
           background-repeat: repeat-x;
       }
        #bottle-label {
@@ -186,13 +186,13 @@
   <script type="text/javascript">
     (function(){
           var box=document.getElementById('coke');
-          box.scrollLeft = 425;
+          box.scrollLeft = 525;
 
           function infScroll(){
               box.scrollLeft   += -1;
 
               if(box.scrollLeft<=2){
-                 box.scrollLeft = 425;
+                 box.scrollLeft = 525;
               }
             window.requestAnimationFrame(infScroll);
           }
