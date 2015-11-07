@@ -30,6 +30,20 @@
           top: -1px;
           left: -.01px;
       }
+      #coke2
+      {
+          width: 197px;
+          height: 600px;
+          overflow: auto;
+          position:relative;
+          margin: auto;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          -webkit-mask-image: url(mask.svg);
+          z-index: 2;
+          top: -1px;
+          left: -.01px;
+      }
       #bottle-mask {
           position:absolute;
           margin: .5% auto;
@@ -47,6 +61,17 @@
           background-size: 525px 410px;
           background-repeat: repeat-x;
       }
+      .label-div2 {
+          position: absolute;
+          top: 21px;
+          width: 1000px;
+          height: 600px;
+          z-index: 2;
+          background-image: url(label.png);
+          background-size: 710px 543px;
+          background-repeat: repeat-x;
+          left: -125px;
+      }
        #bottle-label {
             position: absolute;
             top: 250px;
@@ -56,6 +81,14 @@
         }
       #bottle-overlay {
           height: 461px;
+          position: absolute;
+          margin: .0% auto;
+          left: 0;
+          right: 0;
+          z-index: 3;
+      }
+      #bottle-overlay2 {
+          height: 600px;
           position: absolute;
           margin: .0% auto;
           left: 0;
@@ -231,7 +264,12 @@
         <div id="product-page">
         <div id="product-left">
             <div id="product-picture">
-              <img src="http://www.tisaneteas.com/images/beverage.png" width="100%"/>
+               <img id="bottle-overlay2" src="overlay.png" width="200" style="left: -690px;" />
+                <div id="coke2">
+                  <div class="label-div2">
+                  </div>
+                  <div id="pusher"></div>
+              </div>
             </div>
         </div>
         <div id="product-right">
@@ -285,7 +323,9 @@ Keeping your body balanced and functioning optimally depends almost completely o
                                     </ul>
                                 
                                 </td>
-                                <td width="40%"><img src="http://www.tisaneteas.com/images/ph-emblem.svg" width="150" style="padding-top:50px;"/></td>
+                                <td width="40%">
+                                  <img src="http://www.tisaneteas.com/images/ph-emblem.svg" width="150" style="padding-top:50px;"/>
+                                </td>
                               </tr>
                             </table>
                        		
