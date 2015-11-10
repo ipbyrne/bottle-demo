@@ -111,6 +111,10 @@
       #hero-products-splash {
         padding-top: 10px;
       }
+      
+      .hide {
+        display: none;
+      }
     </style>
 </head>
 <body onscroll="scrollFunction()">
@@ -697,37 +701,18 @@ Keeping your body balanced and functioning optimally depends almost completely o
       // Use math.floor on a random number between 1 &  7, grab "url"+number+'.jpg'
         var secondNumber = Math.floor(Math.random() * ((undisplayedImage.length -1) - 0)) + 0
       // Set up each card to be flipped
-      for(var i = 0; i <= 11; i++) {
-          $("#card"+ (i + 1)).flip({
-            axis: 'x',
-            speed: '1000', // speed is how quickly the flip animation occurs.
-            trigger: 'manual'
-          });
-      }
-
-      // Flip the Card
-      $("#card"+(firstNumber+1)).flip('toggle');
-      
-     
-        
         var imageToBeSwapped = displayedImages[firstNumber];
         var newImage = undisplayedImage[secondNumber];
-        displayedImages[firstNumber] = newImage;
+        displayedImages[firstNumber] = newImage; 
         undisplayedImage[secondNumber] = imageToBeSwapped;
-        setTimeout(function() {
-          $(".image1").attr("src", displayedImages[0]);
-          $(".image2").attr("src", displayedImages[1]);
-          $(".image3").attr("src", displayedImages[2]);
-          $(".image4").attr("src", displayedImages[3]);
-          $(".image5").attr("src", displayedImages[4]);
-          $(".image6").attr("src", displayedImages[5]);
-          $(".image7").attr("src", displayedImages[6]);
-          $(".image8").attr("src", displayedImages[7]);
-          $(".image9").attr("src", displayedImages[8]);
-          $(".image10").attr("src", displayedImages[9]);
-          $(".image11").attr("src", displayedImages[10]);
-          $(".image12").attr("src", displayedImages[11]);    
-        }, 250) //Last input is time which should be 1/4 of the speed of the card flip                                
+      
+         
+        $("#card"+(firstNumber+1)).fadeOut(
+          function(){
+            $(".image"+(firstNumber+1)).attr('src', displayedImages[firstNumber]);
+            $("#card"+(firstNumber+1)).fadeIn();
+          }
+        ); // end fadeOut                    
     }
     
   </script>
