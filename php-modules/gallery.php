@@ -1,4 +1,7 @@
- <div id="demo-container">
+ <div id="demo-container" style="
+    height: inherit;
+    background: none;
+">
       <img class="image1" src="http://www.tisaneteas.com/images/demo1.jpg" width="24.5%" nopin="nopin"/>
       <img class="image2" src="http://www.tisaneteas.com/images/demo2.jpg" width="24.5%" nopin="nopin"/>
       <img class="image3" src="http://www.tisaneteas.com/images/demo3.jpg" width="24.5%" nopin="nopin"/>
